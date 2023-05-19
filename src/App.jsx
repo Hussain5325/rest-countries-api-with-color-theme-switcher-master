@@ -3,7 +3,7 @@ import Navbar from './Components/Navbar'
 import { useState } from 'react'
 
 export default function App() {
-  const [Dark, setDark] = useState(true)
+  const [Dark, setDark] = useState(false)
 
   if (!Dark) {
     const body = document.body
