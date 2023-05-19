@@ -1,0 +1,308 @@
+/* Rset Default CSS and Some changes */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+img,
+picture, 
+video, 
+canvas, 
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    background-color: hsl(207, 26%, 17%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+}
+
+/* NavBar */
+
+.Navbar {
+    width: 100%;
+    height: auto;
+    background-color: hsl(209, 23%, 22%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-shadow: 0px 3px 15px 0px hsl(0, 0%, 0%, .5);
+}
+
+.Navbar-DarkMode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#check {
+    position: absolute;
+    top: -100%;
+}
+
+.Navbar-DarkMode-moon {
+    width: 15px;
+    height: 15px;
+}
+
+.Navbar-DarkMode-label {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* main */
+
+.Main {
+    height: auto;
+    padding: 50px 70px;
+}
+
+.Main-filter {
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px 0;
+    margin-bottom: 50px;
+}
+
+.Main-filter-search {
+    width: 500px;
+    height: auto;
+    background-color: hsl(209, 23%, 22%);
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 5px;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.filter-search {
+    width: 100%;
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+    border: none;
+    outline: none;
+}
+
+.filter-search::placeholder {
+    color: hsl(0, 0%, 85%);
+}
+
+.filter-search-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.filter-menu {
+    width: 200px;
+    height: auto;
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 0 15px 30px;
+    cursor: pointer;
+    border-right: 30px solid transparent;
+}
+
+/* Cards */
+
+.Cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+}
+
+.Card {
+    max-width: 268px;
+    height: auto;
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    text-align: start;
+    border: none;
+    cursor: pointer;
+    transition: opacity ease-in 250ms;
+    padding: 0;
+}
+
+.Card:hover {
+    opacity: 0.5;
+}
+
+.Card-flags {
+    width: 100%;
+    height: 162px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.Card-details {
+    padding: 30px;
+}
+
+.Card-heading {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.Card-info {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.Card-info-style {
+    color: hsl(0, 0%, 85%);
+}
+
+@media (max-width: 1400px) {
+    .Cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1050px) {
+    .Cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 810px) {
+    .Cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Main {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 560px) {
+    .Cards {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+/* secound- page */
+
+.Expend-cards {
+    height: auto;
+    padding: 50px 70px;
+}
+
+.Expend-btn {
+    width: 150px;
+    height: 40px;
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 85%);
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 #000;
+    margin-bottom: 50px;
+}
+
+.btn-arrow {
+    width: 30px;
+    height: 30px;
+}
+
+.Expend-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.Expend-flag {
+    width: 900px;
+    height: auto;
+    object-fit: cover;
+}
+
+.Expend-heading {
+    font-size: 32px;
+}
+
+.details {
+    display: flex;
+    gap: 100px;
+}
+
+.Expend-info {
+    margin-bottom: 10px;
+}
+
+.borders {
+    margin-top: 20px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.box {
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 85%);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 hsl(0, 0%, 0%, .5);
+    cursor: pointer;
+    font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+    .details {
+        display: block;
+        
+    }
+}
+
+@media (max-width: 900px) {
+    .Expend-container {
+        display: block;
+    }
+
+    .Expend-flag {
+        width: 100%;
+        height: auto;
+    }
+
+    .borders {
+        flex-wrap: wrap;
+    }
+}
